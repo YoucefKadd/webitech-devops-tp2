@@ -1,0 +1,19 @@
+name : simple workdlow
+
+on : [push]
+
+jobs:
+  job1:
+    runs-on : ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up python
+        use: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+
+      - name: Say Hello
+        run: echo "Hello"
+      
